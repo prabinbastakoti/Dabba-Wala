@@ -1,0 +1,31 @@
+.featured {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.featured .heading {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.featured .tagContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.featured .tagContainer .tags {
+  font-size: 14px;
+  border: 1px solid #999;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #999;
+  color: black;
+}
