@@ -1,7 +1,12 @@
 import './Homepage.css';
+import Searchbar from '../../components/Searchbar/Searchbar';
 
 const Homepage = () => {
-  return <div>Homepage</div>;
+  return (
+    <div className="homepage">
+      <Searchbar />
+    </div>
+  );
 };
 
 export default Homepage;

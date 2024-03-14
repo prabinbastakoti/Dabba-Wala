@@ -1,0 +1,16 @@
+.searchbar {
+  width: 100%;
+}
+
+.searchBarContainer {
+  width: 40%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBarContainer input {
+  flex: 1;
+  border-radius: 5px;
+}
