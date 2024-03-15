@@ -125,9 +125,16 @@ const RestaurantRegisterPage = () => {
         <button type="submit" onClick={signup}>
           Sign Up
         </button>
+
+        <Link to={'/customerRegister'}>
+          <p className="red">Sign up as a customer</p>
+        </Link>
+
         <p>
           Already have an account?
-          <Link to={'/login'}>Log in</Link>
+          <Link to={'/login'}>
+            <span className="red"> Log in </span>
+          </Link>
         </p>
       </form>
     </div>

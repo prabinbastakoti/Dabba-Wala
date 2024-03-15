@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './CustomerRegisterPage.css';
+import { Link } from 'react-router-dom';
 
 const initialValue = {
   name: '',
@@ -89,8 +90,15 @@ const CustomerRegisterPage = () => {
         <button type="submit" onClick={signup}>
           Sign Up
         </button>
+        <Link to={'/restaurantRegister'}>
+          <p className="red">Sign up as a restaurant</p>
+        </Link>
+
         <p>
-          Already have an account?<button>Log in</button>
+          Already have an account?
+          <Link to={'/login'}>
+            <span className="red"> Log in </span>
+          </Link>
         </p>
       </form>
     </div>
