@@ -37,6 +37,7 @@ const Featured = () => {
               </div>
             );
           })}
+          <div className="tags">...</div>
         </div>
       </div>
       <div className="second">
@@ -49,6 +50,7 @@ const Featured = () => {
               </div>
             );
           })}
+          <div className="tags">...</div>
         </div>
       </div>
       <div className="third">
@@ -61,6 +63,7 @@ const Featured = () => {
               </div>
             );
           })}
+          <div className="tags">...</div>
         </div>
       </div>
     </div>
