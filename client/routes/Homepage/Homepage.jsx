@@ -152,7 +152,6 @@ const Homepage = () => {
       </div>
 
       <h1 className="heading">Connect and Share Your Culinary Adventures!</h1>
-      <div className="footer"></div>
     </div>
   );
 };
