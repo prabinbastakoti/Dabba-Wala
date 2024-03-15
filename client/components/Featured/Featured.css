@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 4rem;
 }
 
 .featured .heading {
@@ -13,25 +13,8 @@
   margin-bottom: 14px;
 }
 
-.featured .tagContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 20px;
-  row-gap: 10px;
-}
-
-.featured .tagContainer .tags {
-  font-size: 14px;
-  border: none;
-  text-align: center;
-  padding: 10px 18px;
-  border-radius: 5px;
-  background-color: #d1d1d1;
-  color: black;
-}
-
-.featured .tagContainer .tags:hover {
-  background: #ff4500;
-  color: white;
-  cursor: pointer;
+.featured img {
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
 }

@@ -35,6 +35,13 @@ const Homepage = () => {
               every time.
             </p>
           </div>
+          <div className="card">
+            <h2 className="title">Discover Local Menus</h2>
+            <p className="description">
+              Dive into an array of menus from local restaurants, each telling a
+              unique culinary story.
+            </p>
+          </div>
         </div>
       </div>
       <Link to={'/customerRegister'} className="primaryButton joinButton">

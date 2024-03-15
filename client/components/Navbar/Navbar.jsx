@@ -9,10 +9,10 @@ const Navbar = () => {
       </Link>
       <div className="authButton">
         <Link to={'/login'}>
-          <button className="primaryButton">Login</button>
+          <button className="primaryButton">LOGIN</button>
         </Link>
         <Link to={'/customerRegister'}>
-          <button className="primaryButton">Register</button>
+          <button className="primaryButton">SIGNUP</button>
         </Link>
       </div>
     </div>
