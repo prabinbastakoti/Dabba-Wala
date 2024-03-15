@@ -60,3 +60,29 @@
   text-align: right;
   font-weight: 600;
 }
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-item {
+  padding: 20px 40px;
+  border-radius: 10px;
+  width: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.title1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dish {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}

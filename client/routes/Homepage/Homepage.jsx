@@ -1,6 +1,7 @@
 import './Homepage.css';
 import Searchbar from '../../components/Searchbar/Searchbar';
 import Featured from '../../components/Featured/Featured';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   return (
@@ -36,9 +37,9 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <button className="primaryButton joinButton">
+      <Link to={'/customerRegister'} className="primaryButton joinButton">
         Join DABBA WALLA Today!
-      </button>
+      </Link>
       <div className="indulge">
         <h1 className="heading">
           Indulge in Culinary Delights with Dabba Walla!
@@ -91,7 +92,62 @@ const Homepage = () => {
           <span className="bold"> Margherita Pizza</span>.
         </p>
       </div>
-      {/* menu */}
+      <div className="menu-container">
+        <div>
+          <h1 className="heading">Our Menu</h1>
+        </div>
+        <div className="menu-item">
+          <h2 className="title1">Classic Burger </h2>
+          <div className="dish">
+            <p>Juicy beef patty, lettuce, tomato, cheese, and special sauce.</p>
+            <p>$ 8.99</p>
+          </div>
+        </div>
+        <div className="menu-item">
+          <h2 className="title1">Margherita Pizza</h2>
+          <div className="dish">
+            <p>
+              Tomato, fresh mozzarella, basil, and olive oil on a thin crust.
+            </p>
+            <p>$ 10.99</p>
+          </div>
+        </div>
+        <div className="menu-item">
+          <h2 className="title1">Chicken Alfredo Pasta</h2>
+          <div className="dish">
+            <p>
+              Grilled chicken breast with creamy Alfredo sauce over fettuccine.
+            </p>
+            <p>$ 12.99</p>
+          </div>
+        </div>
+        <div className="menu-item">
+          <h2 className="title1">Classic Burger </h2>
+          <div className="dish">
+            <p>Juicy beef patty, lettuce, tomato, cheese, and special sauce.</p>
+            <p>$ 8.99</p>
+          </div>
+        </div>
+        <div className="menu-item">
+          <h2 className="title1">Margherita Pizza</h2>
+          <div className="dish">
+            <p>
+              Tomato, fresh mozzarella, basil, and olive oil on a thin crust.
+            </p>
+            <p>$ 10.99</p>
+          </div>
+        </div>
+        <div className="menu-item">
+          <h2 className="title1">Chicken Alfredo Pasta</h2>
+          <div className="dish">
+            <p>
+              Grilled chicken breast with creamy Alfredo sauce over fettuccine.
+            </p>
+            <p>$ 12.99</p>
+          </div>
+        </div>
+      </div>
+
       <div>
         <h1 className="heading">Our Philosophy</h1>
         <p className="paragraph1">
