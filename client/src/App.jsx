@@ -2,7 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from '../routes/Layout/Layout';
 import HomePage from '../routes/Homepage/Homepage';
 import LoginPage from '../routes/Loginpage/Loginpage';
-import RegisterPage from '../routes/Registerpage/Registerpage';
+import CustomerRegisterPage from '../routes/CustomerRegisterpage/CustomerRegisterPage';
+import RestaurantRegisterPage from '../routes/RestaurantRegisterPage/RestaurantRegisterPage';
 import MenuPage from '../routes/Menupage/Menupage';
 import './index.css';
 
@@ -20,8 +21,12 @@ const router = createBrowserRouter([
         element: <LoginPage />,
       },
       {
-        path: '/register',
-        element: <RegisterPage />,
+        path: '/customerRegister',
+        element: <CustomerRegisterPage />,
+      },
+      {
+        path: '/restaurantRegister',
+        element: <RestaurantRegisterPage />,
       },
       {
         path: '/menu',

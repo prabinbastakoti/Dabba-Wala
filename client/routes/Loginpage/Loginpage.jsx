@@ -46,10 +46,10 @@ const Loginpage = () => {
 
         <div className="last">
           Don't have an account?{' '}
-          <Link to={'/register'}>
+          <Link to={'/customerRegister'}>
             <span className="span1">Signup as a customer</span>
           </Link>
-          <Link to={'/register'}>
+          <Link to={'/restaurantRegister'}>
             <span className="span2">Signup your Restaurant</span>
           </Link>
         </div>
