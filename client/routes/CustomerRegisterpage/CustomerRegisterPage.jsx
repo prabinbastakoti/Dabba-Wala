@@ -1,22 +1,43 @@
 import { useState } from 'react';
 import './CustomerRegisterPage.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import AuthService from '../../services/authService';
+import { toast } from 'react-toastify';
 
 const initialValue = {
   firstName: '',
-  secondName: '',
+  lastName: '',
   username: '',
   email: '',
   password: '',
+  accountType: 'Customer',
 };
 
 const CustomerRegisterPage = () => {
   const [data, setData] = useState(initialValue);
+  const navigate = useNavigate();
 
-  const signup = (e) => {
+  const signup = async (e) => {
     e.preventDefault();
-    console.log(data);
-    setData(initialValue);
+    try {
+      await AuthService.registerCustomer(data);
+      setData(initialValue);
+      setTimeout(() => {
+        toast.success('Signup Successful! Login to Continue', {
+          position: 'top-right',
+          toastId: 'success3',
+        });
+      }, 1);
+      navigate('/loginCustomer');
+    } catch (error) {
+      console.log(error);
+      setTimeout(() => {
+        toast.error('Signup Failed!', {
+          position: 'top-right',
+          toastId: 'error3',
+        });
+      }, 1);
+    }
   };
 
   const handleChange = (event, item) => {
@@ -37,13 +58,13 @@ const CustomerRegisterPage = () => {
           value={data.firstName}
           onChange={(e) => handleChange(e, 'firstName')}
         />
-        <label htmlFor="name">Second Name:</label>
+        <label htmlFor="name">Last Name:</label>
         <input
-          id="secondName"
-          name="secondName"
+          id="lastName"
+          name="lastName"
           type="text"
-          value={data.secondName}
-          onChange={(e) => handleChange(e, 'secondName')}
+          value={data.lastName}
+          onChange={(e) => handleChange(e, 'lastName')}
         />
         <label htmlFor="name">Username:</label>
         <input
@@ -77,7 +98,7 @@ const CustomerRegisterPage = () => {
         </Link>
         <p>
           Already have an account?
-          <Link to={'/login'}>
+          <Link to={'/loginCustomer'}>
             <span className="red"> Log in </span>
           </Link>
         </p>

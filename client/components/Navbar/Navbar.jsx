@@ -8,7 +8,7 @@ const Navbar = () => {
         <h1>Dabba Wala</h1>
       </Link>
       <div className="authButton">
-        <Link to={'/login'}>
+        <Link to={'/loginCustomer'}>
           <button className="primaryButton">LOGIN</button>
         </Link>
         <Link to={'/customerRegister'}>

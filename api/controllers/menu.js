@@ -1,4 +1,5 @@
 const config = require('../utils/config');
+const mysql = require('mysql');
 
 const addMenuItem = async (req, res) => {
   const { name, price, category, restaurantId } = req.body;

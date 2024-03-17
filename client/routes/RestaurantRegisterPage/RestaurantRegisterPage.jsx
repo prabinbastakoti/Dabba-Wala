@@ -1,20 +1,42 @@
 import { useState } from 'react';
 import './RestaurantRegisterPage.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import AuthService from '../../services/authService';
+import { toast } from 'react-toastify';
 
 const initialValue = {
   name: '',
   username: '',
   contact: '',
   password: '',
+  accountType: 'Restaurant',
 };
 
 const RestaurantRegisterPage = () => {
   const [data, setData] = useState(initialValue);
+  const navigate = useNavigate();
 
-  const signup = (e) => {
+  const signup = async (e) => {
     e.preventDefault();
-    console.log(data);
+    try {
+      await AuthService.registerRestaurant(data);
+      setData(initialValue);
+      setTimeout(() => {
+        toast.success('Signup Successful! Login to Continue', {
+          position: 'top-right',
+          toastId: 'success4',
+        });
+      }, 1);
+      navigate('/loginRestaurant');
+    } catch (error) {
+      console.log(error);
+      setTimeout(() => {
+        toast.error('Signup Failed!', {
+          position: 'top-right',
+          toastId: 'error4',
+        });
+      }, 1);
+    }
   };
 
   const handleChange = (event, item) => {
@@ -78,7 +100,7 @@ const RestaurantRegisterPage = () => {
 
         <p>
           Already have an account?
-          <Link to={'/login'}>
+          <Link to={'/loginRestaurant'}>
             <span className="red"> Log in </span>
           </Link>
         </p>

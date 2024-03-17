@@ -1,19 +1,51 @@
-import './Loginpage.css';
+import './RestaurantLoginPage.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import AuthService from '../../services/authService';
+import { toast } from 'react-toastify';
 
-const Loginpage = () => {
-  const [data, setData] = useState({
-    username: '',
-    password: '',
-  });
-  const login = (event) => {
+const initialValue = {
+  username: '',
+  password: '',
+  accountType: 'Restaurant',
+};
+
+const RestaurantLoginPage = () => {
+  const [data, setData] = useState(initialValue);
+
+  const navigate = useNavigate();
+
+  const login = async (event) => {
     event.preventDefault();
+    try {
+      await AuthService.login(data);
+      setData(initialValue);
+      setTimeout(() => {
+        toast.success('Login Successful!', {
+          position: 'top-right',
+          toastId: 'success2',
+        });
+      }, 1);
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+      toast.error('Login Failed!', {
+        position: 'top-right',
+        toastId: 'error2',
+      });
+    }
   };
   return (
     <div className="loginpage">
       <form onSubmit={login}>
-        <h1>Login</h1>
+        <div className="top">
+          <Link to={'/loginCustomer'}>
+            <span className="span2">Customer</span>
+          </Link>
+          <div> | </div>
+          <div>Restaurant</div>
+        </div>
+        <h1>Login For Restaurant</h1>
         <div className="inputElement">
           <label htmlFor="username">Username: </label>
           <input
@@ -55,4 +87,4 @@ const Loginpage = () => {
     </div>
   );
 };
-export default Loginpage;
+export default RestaurantLoginPage;

@@ -1,4 +1,4 @@
 const table =
-  'CREATE TABLE Customer (id int,firstName varchar(255),lastName varchar(255),username varchar(255),email varchar(255),password varchar(255),PRIMARY KEY (id));';
+  'CREATE TABLE Customer (id int NOT NULL AUTO_INCREMENT,firstName varchar(255) NOT NULL,lastName varchar(255) NOT NULL, accountType varchar(255) NOT NULL, username varchar(255) NOT NULL,email varchar(255) NOT NULL,password varchar(255) NOT NULL,PRIMARY KEY (id));';
 
 module.exports = table;
