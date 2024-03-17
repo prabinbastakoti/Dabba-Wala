@@ -3,12 +3,9 @@ import './CustomerRegisterPage.css';
 import { Link } from 'react-router-dom';
 
 const initialValue = {
-  name: '',
+  firstName: '',
+  secondName: '',
   email: '',
-  number: '',
-  delivery: '',
-  cusine: '',
-  restriction: '',
   password: '',
 };
 
@@ -31,13 +28,21 @@ const CustomerRegisterPage = () => {
     <div className="CustomerRegisterPage">
       <form onSubmit={signup}>
         <h1>Customer Sign Up</h1>
-        <label htmlFor="name">Full Name:</label>
+        <label htmlFor="name">First Name:</label>
         <input
-          id="name"
-          name="name"
+          id="firstName"
+          name="firstName"
           type="text"
-          value={data.name}
-          onChange={(e) => handleChange(e, 'name')}
+          value={data.firstName}
+          onChange={(e) => handleChange(e, 'firstName')}
+        />
+        <label htmlFor="name">Second Name:</label>
+        <input
+          id="secondName"
+          name="secondName"
+          type="text"
+          value={data.secondName}
+          onChange={(e) => handleChange(e, 'secondName')}
         />
         <label htmlFor="email">Email Address:</label>
         <input
@@ -46,38 +51,6 @@ const CustomerRegisterPage = () => {
           type="email"
           value={data.email}
           onChange={(e) => handleChange(e, 'email')}
-        />
-        <label htmlFor="number">Phone Number:</label>
-        <input
-          id="number"
-          name="number"
-          type="text"
-          value={data.number}
-          onChange={(e) => handleChange(e, 'number')}
-        />
-        <label htmlFor="delivery">Delivery Address:</label>
-        <input
-          id="delivery"
-          name="delivery"
-          type="text"
-          value={data.delivery}
-          onChange={(e) => handleChange(e, 'delivery')}
-        />
-        <label htmlFor="cuisine">Preferred Cuisine Types:</label>
-        <input
-          id="cuisine"
-          name="cuisine"
-          type="text"
-          value={data.cusine}
-          onChange={(e) => handleChange(e, 'cusine')}
-        />
-        <label htmlFor="restriction">Dietary Restrictions:</label>
-        <input
-          id="restriction"
-          name="restriction"
-          type="text"
-          value={data.restriction}
-          onChange={(e) => handleChange(e, 'restriction')}
         />
         <label htmlFor="password">Password:</label>
         <input
@@ -93,7 +66,6 @@ const CustomerRegisterPage = () => {
         <Link to={'/restaurantRegister'}>
           <p className="red">Sign up as a restaurant</p>
         </Link>
-
         <p>
           Already have an account?
           <Link to={'/login'}>

@@ -6,11 +6,6 @@ const initialValue = {
   name: '',
   location: '',
   contact: '',
-  cuisine: '',
-  menu: '',
-  time: '',
-  Delivery: '',
-  order: '',
   password: '',
 };
 
@@ -60,56 +55,6 @@ const RestaurantRegisterPage = () => {
           value={data.contact}
           onChange={(e) => {
             handleChange(e, 'contact');
-          }}
-        />
-        <label htmlFor="cuisine">Cuisine Offered:</label>
-        <input
-          id="cuisine"
-          name="cuisine"
-          type="text"
-          value={data.cuisine}
-          onChange={(e) => {
-            handleChange(e, 'cuisine');
-          }}
-        />
-        <label htmlFor="menu">Sample Menu:</label>
-        <input
-          id="menu"
-          name="menu"
-          type="text"
-          value={data.menu}
-          onChange={(e) => {
-            handleChange(e, 'menu');
-          }}
-        />
-        <label htmlFor="hours">Opening Hours:</label>
-        <input
-          id="hours"
-          name="hours"
-          type="text"
-          value={data.time}
-          onChange={(e) => {
-            handleChange(e, 'time');
-          }}
-        />
-        <label htmlFor="delivery">Delivery Areas:</label>
-        <input
-          id="delivery"
-          name="delivery"
-          type="text"
-          value={data.Delivery}
-          onChange={(e) => {
-            handleChange(e, 'Delivery');
-          }}
-        />
-        <label htmlFor="order">Minimum Order Requirements:</label>
-        <input
-          id="order"
-          name="order"
-          type="text"
-          value={data.order}
-          onChange={(e) => {
-            handleChange(e, 'order');
           }}
         />
         <label htmlFor="password">Password:</label>
