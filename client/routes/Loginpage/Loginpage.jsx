@@ -20,7 +20,6 @@ const Loginpage = () => {
             id="username"
             name="username"
             type="email"
-            placeholder="Please Enter Your Username"
             value={data.username}
             onChange={(event) => {
               setData({ ...data, username: event.target.value });
@@ -33,7 +32,6 @@ const Loginpage = () => {
             id="password"
             name="password"
             type="password"
-            placeholder="Please Enter Your Password"
             value={data.password}
             onChange={(event) => {
               setData({ ...data, password: event.target.value });

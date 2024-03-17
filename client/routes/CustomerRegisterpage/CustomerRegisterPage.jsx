@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const initialValue = {
   firstName: '',
   secondName: '',
+  username: '',
   email: '',
   password: '',
 };
@@ -43,6 +44,14 @@ const CustomerRegisterPage = () => {
           type="text"
           value={data.secondName}
           onChange={(e) => handleChange(e, 'secondName')}
+        />
+        <label htmlFor="name">Username:</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          value={data.username}
+          onChange={(e) => handleChange(e, 'username')}
         />
         <label htmlFor="email">Email Address:</label>
         <input

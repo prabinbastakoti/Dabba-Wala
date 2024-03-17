@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const initialValue = {
   name: '',
-  location: '',
+  username: '',
   contact: '',
   password: '',
 };
@@ -37,14 +37,15 @@ const RestaurantRegisterPage = () => {
             handleChange(e, 'name');
           }}
         />
-        <label htmlFor="location">Location:</label>
+
+        <label htmlFor="location">Username:</label>
         <input
-          id="location"
-          name="location"
+          id="username"
+          name="username"
           type="text"
-          value={data.location}
+          value={data.username}
           onChange={(e) => {
-            handleChange(e, 'location');
+            handleChange(e, 'username');
           }}
         />
         <label htmlFor="contact">Contact Information:</label>
