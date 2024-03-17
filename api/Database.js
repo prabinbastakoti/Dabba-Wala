@@ -15,17 +15,23 @@ con.connect(function (err) {
   con.query('CREATE DATABASE dabbawalla', function (err, result) {
     if (err) throw err;
     console.log('Database created');
-  });
-  con.query(customer, function (err, result) {
-    if (err) throw err;
-    console.log('Customer Table created');
-  });
-  con.query(restaurant, function (err, result) {
-    if (err) throw err;
-    console.log('Restaurant Table created');
-  });
-  con.query(menuItem, function (err, result) {
-    if (err) throw err;
-    console.log('MenuItem Table created');
+    const connect = mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      database: 'dabbawalla', // Use the name of the database you created
+    });
+    connect.query(customer, function (err, result) {
+      if (err) throw err;
+      console.log('Customer Table created');
+    });
+    connect.query(restaurant, function (err, result) {
+      if (err) throw err;
+      console.log('Restaurant Table created');
+    });
+    connect.query(menuItem, function (err, result) {
+      if (err) throw err;
+      console.log('MenuItem Table created');
+    });
   });
 });
