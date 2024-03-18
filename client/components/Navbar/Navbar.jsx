@@ -4,6 +4,7 @@ import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
+import { FaUserCircle } from 'react-icons/fa';
 
 const Navbar = () => {
   const { user, dispatch } = useContext(AuthContext);
@@ -39,9 +40,20 @@ const Navbar = () => {
           </Link>
         </div>
       ) : (
-        <button className="primaryButton" onClick={logout}>
-          LOGOUT
-        </button>
+        <div className="profile">
+          <div className="profileName">
+            <FaUserCircle className="user" />
+            <span>{user.name}</span>
+          </div>
+          {user.accountType === 'Restaurant' && (
+            <Link to={'/addMenu'} className="primaryButton">
+              Add Menu Item
+            </Link>
+          )}
+          <button className="primaryButton" onClick={logout}>
+            LOGOUT
+          </button>
+        </div>
       )}
     </div>
   );

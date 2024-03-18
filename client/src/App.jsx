@@ -10,6 +10,8 @@ import RestaurantLoginPage from '../routes/RestaurantLoginPage/RestaurantLoginPa
 import { AuthContextProvider } from '../context/AuthContext';
 import './index.css';
 import axios from 'axios';
+import AddMenuPage from '../routes/AddMenuPage/AddMenuPage';
+
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 const router = createBrowserRouter([
@@ -38,8 +40,12 @@ const router = createBrowserRouter([
         element: <RestaurantRegisterPage />,
       },
       {
-        path: '/menu',
+        path: '/menu/:id',
         element: <MenuPage />,
+      },
+      {
+        path: '/addMenu',
+        element: <AddMenuPage />,
       },
     ],
   },

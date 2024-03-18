@@ -27,9 +27,9 @@ const addMenuItem = async (req, res) => {
 };
 
 const getMenuItem = async (req, res) => {
-  const { restaurantId } = req.body;
+  const { id } = req.params;
   const query =
-    'SELECT * FROM MenuItem WHERE restaurantId = ' + mysql.escape(restaurantId);
+    'SELECT * FROM MenuItem WHERE restaurantID = ' + mysql.escape(id);
 
   config.Connection.query(query, (error, result) => {
     if (error) {

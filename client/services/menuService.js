@@ -5,8 +5,8 @@ const addMenuItem = async (data) => {
   return response.data;
 };
 
-const getMenuItem = async () => {
-  const response = await axios.get('/menu/getMenuItem');
+const getMenuItem = async (id) => {
+  const response = await axios.get('/menu/getMenuItem/' + id);
   return response.data;
 };
 

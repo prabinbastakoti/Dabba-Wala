@@ -1,0 +1,44 @@
+.Menupage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.Menupage .heading {
+  text-align: center;
+  background: #000;
+  width: 70%;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.MenuContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10rem;
+  row-gap: 4rem;
+}
+
+.MenuContainer .categoryHeading {
+  font-size: 24px;
+  background: #ff4500;
+  padding: 4px 10px;
+  color: white;
+  margin: 30px 0px;
+  text-align: center;
+}
+
+.itemName {
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}

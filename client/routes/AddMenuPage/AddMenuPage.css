@@ -1,0 +1,59 @@
+.addMenuPage .heading {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.addMenuPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.addMenuPage form {
+  margin: 0px auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 40px 50px;
+  border-radius: 10px;
+}
+
+.addMenuPage .MenuItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addMenuPage .MenuItems label {
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+}
+
+.addMenuPage .MenuItems select {
+  height: 36px;
+  font-size: 20px;
+  padding: 4px;
+}
+
+.addMenuPage .MenuItems input {
+  margin: 0px auto;
+  width: 450px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  border: 1px solid #888;
+  outline: none;
+  font-size: 18px;
+}

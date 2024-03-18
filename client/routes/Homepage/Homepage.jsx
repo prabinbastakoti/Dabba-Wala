@@ -1,14 +1,25 @@
 import './Homepage.css';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Searchbar from '../../components/Searchbar/Searchbar';
 import Featured from '../../components/Featured/Featured';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
+import RestaurantService from '../../services/restaurantService';
+import axios from 'axios';
 
 const Homepage = () => {
   const { user } = useContext(AuthContext);
+  const [restaurant, setRestaurant] = useState([]);
 
-  console.log(typeof user, user);
+  useEffect(() => {
+    RestaurantService.getAllRestaurant()
+      .then((response) => {
+        setRestaurant(response.result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <div className="homepage">
@@ -105,61 +116,25 @@ const Homepage = () => {
           <span className="bold"> Margherita Pizza</span>.
         </p>
       </div>
-      <div className="menu-container">
-        <div>
-          <h1 className="heading">Our Menu</h1>
-        </div>
-        <div className="menu-item">
-          <h2 className="title1">Classic Burger </h2>
-          <div className="dish">
-            <p>Juicy beef patty, lettuce, tomato, cheese, and special sauce.</p>
-            <p>$ 8.99</p>
+      {restaurant && (
+        <div className="restaurant-container">
+          <h1 className="heading">Checkout these restaurants</h1>
+          <div className="wrapper">
+            {restaurant.map((item) => {
+              return (
+                <div key={item.id} className="menu-item">
+                  <h2 className="title1">{item.name}</h2>
+                  <div className="seeMenu">
+                    <Link to={`/menu/${item.id}`}>
+                      <button className="primaryButton">See Menu</button>
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
-        <div className="menu-item">
-          <h2 className="title1">Margherita Pizza</h2>
-          <div className="dish">
-            <p>
-              Tomato, fresh mozzarella, basil, and olive oil on a thin crust.
-            </p>
-            <p>$ 10.99</p>
-          </div>
-        </div>
-        <div className="menu-item">
-          <h2 className="title1">Chicken Alfredo Pasta</h2>
-          <div className="dish">
-            <p>
-              Grilled chicken breast with creamy Alfredo sauce over fettuccine.
-            </p>
-            <p>$ 12.99</p>
-          </div>
-        </div>
-        <div className="menu-item">
-          <h2 className="title1">Classic Burger </h2>
-          <div className="dish">
-            <p>Juicy beef patty, lettuce, tomato, cheese, and special sauce.</p>
-            <p>$ 8.99</p>
-          </div>
-        </div>
-        <div className="menu-item">
-          <h2 className="title1">Margherita Pizza</h2>
-          <div className="dish">
-            <p>
-              Tomato, fresh mozzarella, basil, and olive oil on a thin crust.
-            </p>
-            <p>$ 10.99</p>
-          </div>
-        </div>
-        <div className="menu-item">
-          <h2 className="title1">Chicken Alfredo Pasta</h2>
-          <div className="dish">
-            <p>
-              Grilled chicken breast with creamy Alfredo sauce over fettuccine.
-            </p>
-            <p>$ 12.99</p>
-          </div>
-        </div>
-      </div>
+      )}
 
       <div>
         <h1 className="heading">Our Philosophy</h1>

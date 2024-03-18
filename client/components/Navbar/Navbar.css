@@ -26,3 +26,27 @@
   font-size: 14px;
   letter-spacing: 1px;
 }
+
+.navbar .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar .user {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar .profileName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .profileName span {
+  font-size: 16px;
+  font-weight: 500;
+}
