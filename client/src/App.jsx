@@ -7,6 +7,7 @@ import RestaurantRegisterPage from '../routes/RestaurantRegisterPage/RestaurantR
 import MenuPage from '../routes/Menupage/Menupage';
 import CustomerLoginPage from '../routes/CustomerLoginPage/CustomerLoginPage';
 import RestaurantLoginPage from '../routes/RestaurantLoginPage/RestaurantLoginPage';
+import { AuthContextProvider } from '../context/AuthContext';
 import './index.css';
 import axios from 'axios';
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
@@ -45,7 +46,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthContextProvider>
+      <RouterProvider router={router} />;
+    </AuthContextProvider>
+  );
 }
 
 export default App;

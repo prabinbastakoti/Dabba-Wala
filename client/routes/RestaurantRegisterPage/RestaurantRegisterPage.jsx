@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import './RestaurantRegisterPage.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, Navigate } from 'react-router-dom';
 import AuthService from '../../services/authService';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../context/AuthContext';
 
 const initialValue = {
   name: '',
@@ -14,6 +15,8 @@ const initialValue = {
 
 const RestaurantRegisterPage = () => {
   const [data, setData] = useState(initialValue);
+  const { user } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const signup = async (e) => {
@@ -44,6 +47,10 @@ const RestaurantRegisterPage = () => {
     copy[item] = event.target.value;
     setData(copy);
   };
+
+  if (user) {
+    return <Navigate to={'/'} />;
+  }
 
   return (
     <div className="restaurantRegisterPage">

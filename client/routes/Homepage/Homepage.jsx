@@ -1,9 +1,15 @@
 import './Homepage.css';
+import { useContext } from 'react';
 import Searchbar from '../../components/Searchbar/Searchbar';
 import Featured from '../../components/Featured/Featured';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
 const Homepage = () => {
+  const { user } = useContext(AuthContext);
+
+  console.log(typeof user, user);
+
   return (
     <div className="homepage">
       <Searchbar />

@@ -1,8 +1,9 @@
 import './CustomerLoginPage.css';
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useState, useContext } from 'react';
+import { Link, useNavigate, Navigate } from 'react-router-dom';
 import AuthService from '../../services/authService';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../context/AuthContext';
 
 const initialValue = {
   username: '',
@@ -12,13 +13,23 @@ const initialValue = {
 
 const CustomerLoginPage = () => {
   const [data, setData] = useState(initialValue);
+  const { user, dispatch } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
   const login = async (event) => {
     event.preventDefault();
     try {
-      await AuthService.login(data);
+      const response = await AuthService.login(data);
+      dispatch({
+        type: 'LOGIN_SUCCESS',
+        payload: response.result[0],
+      });
+      window.localStorage.clear();
+      window.localStorage.setItem(
+        'USERDATA',
+        JSON.stringify(response.result[0])
+      );
       setData(initialValue);
       setTimeout(() => {
         toast.success('Login Successful!', {
@@ -35,6 +46,11 @@ const CustomerLoginPage = () => {
       });
     }
   };
+
+  if (user) {
+    return <Navigate to={'/'} />;
+  }
+
   return (
     <div className="loginpage">
       <form onSubmit={login}>
