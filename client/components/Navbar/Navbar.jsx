@@ -43,7 +43,12 @@ const Navbar = () => {
         <div className="profile">
           <div className="profileName">
             <FaUserCircle className="user" />
-            <span>{user.name}</span>
+            {user.accountType === 'Restaurant' && <span>{user.name}</span>}
+            {user.accountType === 'Customer' && (
+              <span>
+                {user.firstName} {user.lastName}
+              </span>
+            )}
           </div>
           {user.accountType === 'Restaurant' && (
             <Link to={'/addMenu'} className="primaryButton">
