@@ -1,5 +1,13 @@
 # Dabba-Wala
 
+STEPS TO RUN DABBA_WALLA
+1. Download and install vscode, node and xampp.
+2. Open Dabba-walla Repository in vscode.
+3. Open Terminal.
+4. FOLLOW "STEPS TO RUN BACKEND"
+5. FOLLOW "STEPS TO RUN FRONTEND"
+
+
 STEPS TO RUN BACKEND
 
 1. Go to Backend directory 'cd api'
