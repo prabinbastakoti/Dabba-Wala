@@ -2,14 +2,16 @@ const config = require('../utils/config');
 const mysql = require('mysql');
 
 const addMenuItem = async (req, res) => {
-  const { name, price, category, restaurantId } = req.body;
+  const { name, price, category, restaurantId, photo } = req.body;
   const query =
-    'INSERT INTO MenuItem (name, price, category, restaurantId) VALUES (' +
+    'INSERT INTO MenuItem (name, price, category, photo, restaurantId) VALUES (' +
     mysql.escape(name) +
     ',' +
     mysql.escape(price) +
     ',' +
     mysql.escape(category) +
+    ',' +
+    mysql.escape(photo) +
     ',' +
     mysql.escape(restaurantId) +
     ');';
