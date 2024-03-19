@@ -3,6 +3,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { useContext, useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import MenuService from '../../services/menuService';
+import ScrollToTop from '../../components/ScrollToTop';
 
 const baseUrl = import.meta.env.VITE_BASE_URL;
 
@@ -40,6 +41,7 @@ const Menupage = () => {
 
   return (
     <div className="Menupage">
+      <ScrollToTop />
       <div className="heading">MENU</div>
       <div className="MenuContainer">
         {categories.map((category) => {
