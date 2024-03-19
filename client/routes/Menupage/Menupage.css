@@ -10,17 +10,19 @@
 .Menupage .heading {
   text-align: center;
   background: #000;
-  width: 70%;
+  width: 30%;
   color: white;
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 4px;
   margin-bottom: 30px;
+  padding: 8px 100px;
 }
 
 .MenuContainer {
+  width: 80%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   column-gap: 10rem;
   row-gap: 4rem;
 }
@@ -30,8 +32,10 @@
   background: #ff4500;
   padding: 4px 10px;
   color: white;
-  margin: 30px 0px;
+  margin: 30px auto;
   text-align: center;
+  width: max-content;
+  padding: 8px 30px;
 }
 
 .itemName {
@@ -40,5 +44,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
+  width: 400px;
+  margin: 16px auto;
+}
+
+.itemThumbnail {
+  width: 200px;
+  height: 200px;
+}
+
+.itemPricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemContainer {
+  margin: 0px auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }

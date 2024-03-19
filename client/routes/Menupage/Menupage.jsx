@@ -4,6 +4,8 @@ import { useContext, useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import MenuService from '../../services/menuService';
 
+const baseUrl = import.meta.env.VITE_BASE_URL;
+
 const categories = [
   'Sandwiches',
   'Hamburgers',
@@ -46,16 +48,25 @@ const Menupage = () => {
               <div key={category} className="categoryHeading">
                 {category}
               </div>
-              {menu.map((item) => {
-                return item.category === category ? (
-                  <div key={item.id} className="itemName">
-                    <div>{item.name}</div>
-                    <div>${item.price}</div>
-                  </div>
-                ) : (
-                  ''
-                );
-              })}
+              <div className="itemContainer">
+                {menu.map((item) => {
+                  return item.category === category ? (
+                    <div key={item.id} className="itemName">
+                      <img
+                        src={`${baseUrl}/${item.photo}`}
+                        alt=""
+                        className="itemThumbnail"
+                      />
+                      <div className="itemPricing">
+                        <div>{item.name}</div>
+                      </div>
+                      <div>${item.price}</div>
+                    </div>
+                  ) : (
+                    ''
+                  );
+                })}
+              </div>
             </div>
           );
         })}
