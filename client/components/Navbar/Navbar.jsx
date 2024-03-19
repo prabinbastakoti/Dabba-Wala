@@ -1,6 +1,6 @@
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
@@ -43,9 +43,11 @@ const Navbar = () => {
         <div className="profile">
           <div className="profileName">
             <FaUserCircle className="user" />
-            {user.accountType === 'Restaurant' && <span>{user.name}</span>}
+            {user.accountType === 'Restaurant' && (
+              <span className="userName">{user.name}</span>
+            )}
             {user.accountType === 'Customer' && (
-              <span>
+              <span className="userName">
                 {user.firstName} {user.lastName}
               </span>
             )}
