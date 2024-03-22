@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <title>DabbaWalla - SIGNUP</title>
+  </head>
+  <body>
+    <form method="post" action="/signupform">
+      <h1>Customer Sign Up</h1>
+      <label htmlFor="name">Full Name:</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Please enter your name"
+      />
+      <label htmlFor="email">Email Address:</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Please enter your email"
+      />
+      <label htmlFor="number">Phone Number:</label>
+      <input
+        id="number"
+        name="number"
+        type="text"
+        placeholder="Please enter your Phone Number"
+      />
+      <label htmlFor="delivery">Delivery Address:</label>
+      <input
+        id="delivery"
+        name="delivery"
+        type="text"
+        placeholder="Please enter your Delivery Address"
+      />
+      <label htmlFor="cuisine">Preferred Cuisine Types:</label>
+      <input
+        id="cuisine"
+        name="cuisine"
+        type="text"
+        placeholder="Please enter your cuisine"
+      />
+      <label htmlFor="restriction">Dietary Restrictions:</label>
+      <input
+        id="restriction"
+        name="restriction"
+        type="text"
+        placeholder="Please enter your restriction"
+      />
+      <label htmlFor="password">Password:</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        placeholder="Please enter your password"
+      />
+      <button type="submit">Sign Up</button>
+      <p class="last">
+        Already have an account?<button><a href="/loginform">Log in</a></button>
+      </p>
+    </form>
+  </body>
+</html>
