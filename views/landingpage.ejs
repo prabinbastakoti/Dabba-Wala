@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/menu.css" />
     <title>DABBAWALLA</title>
   </head>
   <body>
@@ -26,9 +27,9 @@
       </div>
       <%} else { %>
       <div class="cartSection">
-        <div class="cart">
+        <div class="cart" onclick="showCart()">
           <img src="/cart.png" alt="" />
-          <div class="number">0</div>
+          <div class="number"></div>
         </div>
         <button class="primaryButton" id="logout">
           <a href="/logout">Logout</a>
@@ -196,5 +197,32 @@
 
       <h1 class="heading">Connect and Share Your Culinary Adventures!</h1>
     </div>
+    <div class="toggleCart">
+      <div class="topSection">
+        <h1>Cart</h1>
+        <img src="/1.webp" alt="" class="cross" onclick="hideCart()" />
+      </div>
+
+      <div class="leftSection"></div>
+      <div class="RigthSection">
+        <h1>Payment Information</h1>
+        <form action="">
+          <label for="card">
+            <input type="text" placeholder="Card Number" />
+          </label>
+          <label for="expiry">
+            <input type="text" placeholder="Expiry Date (MM/YY)" />
+          </label>
+          <label for="cvv">
+            <input type="text" placeholder="CVV" />
+          </label>
+          <label for="name">
+            <input type="text" placeholder="Name on Card" />
+          </label>
+          <button class="payButton" onclick="successPurchase()">Pay Now</button>
+        </form>
+      </div>
+    </div>
+    <script src="/js/index.js" defer></script>
   </body>
 </html>
