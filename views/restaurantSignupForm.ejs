@@ -8,25 +8,32 @@
   </head>
   <body>
     <a href="/"><h1 class="heading">DABBAWALLA</h1></a>
-    <form method="post" action="/signupform">
+    <form method="post" action="/RegisterSignupform">
       <div class="signupOptions">
-        <a href="/signupform" style="color: #ff7f00">Customer</a> |
-        <a href="/RegisterSignupform">Restaurant</a>
+        <a href="/signupform">Customer</a> |
+        <a href="/RegisterSignupform" style="color: #ff7f00">Restaurant</a>
       </div>
-      <h1>Customer Sign Up</h1>
-      <label htmlFor="name">Full Name:</label>
+      <h1>Restaurant Sign Up</h1>
+      <label htmlFor="name">Restaurant Name:</label>
       <input
         id="name"
         name="name"
         type="text"
-        placeholder="Please enter your name"
+        placeholder="Please enter your restaurant name"
       />
       <label htmlFor="email">Email Address:</label>
       <input
         id="email"
         name="email"
         type="email"
-        placeholder="Please enter your email"
+        placeholder="Please enter your Email Address"
+      />
+      <label htmlFor="location">location:</label>
+      <input
+        id="location"
+        name="location"
+        type="text"
+        placeholder="Please enter your location"
       />
       <label htmlFor="number">Phone Number:</label>
       <input
@@ -35,26 +42,33 @@
         type="text"
         placeholder="Please enter your Phone Number"
       />
-      <label htmlFor="delivery">Delivery Address:</label>
+      <label htmlFor="hours">Opening Hours:</label>
+      <input
+        id="hours"
+        name="hours"
+        type="text"
+        placeholder="Please enter your Opening hours"
+      />
+      <label htmlFor="cuisine"> Cuisine Offered:</label>
+      <input
+        id="cuisine"
+        name="cuisine"
+        type="text"
+        placeholder="Please enter your Offered cuisine"
+      />
+      <label htmlFor="delivery">Delivery Areas:</label>
       <input
         id="delivery"
         name="delivery"
         type="text"
         placeholder="Please enter your Delivery Address"
       />
-      <label htmlFor="cuisine">Preferred Cuisine Types:</label>
+      <label htmlFor="minOrder">Minimum order requirements:</label>
       <input
-        id="cuisine"
-        name="cuisine"
+        id="minOrder"
+        name="minOrder"
         type="text"
-        placeholder="Please enter your cuisine"
-      />
-      <label htmlFor="restriction">Dietary Restrictions:</label>
-      <input
-        id="restriction"
-        name="restriction"
-        type="text"
-        placeholder="Please enter your restriction"
+        placeholder="Please enter your minimum order requirements"
       />
       <label htmlFor="password">Password:</label>
       <input

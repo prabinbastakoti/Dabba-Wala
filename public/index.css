@@ -39,7 +39,7 @@ form h1 {
   text-transform: uppercase;
 }
 form button {
-  background: #ff0000;
+  background: #ff7f00;
   color: white;
   width: 100%;
   text-align: center;
@@ -65,7 +65,7 @@ form .last {
 
 span {
   text-align: center;
-  color: #ff0000;
+  color: #ff7f00;
   font-size: 20px;
 }
 
@@ -103,13 +103,13 @@ a {
 }
 
 .container span {
-  color: #ff0000;
+  color: #ff7f00;
   font-size: 28px;
   font-weight: 700;
 }
 
 .signupButton {
-  background-color: #ff0000;
+  background-color: #ff7f00;
   color: white;
   padding: 20px 30px;
   outline: none;
@@ -127,7 +127,7 @@ a {
 }
 
 .primaryButton {
-  background-color: #ff0000;
+  background-color: #ff7f00;
   color: white;
   padding: 16px 40px;
   outline: none;
@@ -136,6 +136,7 @@ a {
   font-size: 20px;
   border-radius: 10px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .heading {
@@ -265,4 +266,55 @@ a {
   padding: 10px 20px;
   border-radius: 10px;
   border: 1px solid #999;
+}
+
+.signupOptions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.lunchBox {
+  width: 400px;
+  margin: 80px auto 0px auto;
+}
+
+.lunchBox button {
+  width: 100%;
+  font-size: 16px;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+}
+
+ul li {
+  list-style: none;
+}
+
+.cartSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.cart {
+  position: relative;
+}
+
+.cart .number {
+  position: absolute;
+  top: -15px;
+  right: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: #ff7f00;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
 }

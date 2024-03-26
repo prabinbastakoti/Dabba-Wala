@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 const customer = require('./model/Customer');
+const restaurant = require('./model/Restaurant');
 
 const con = mysql.createConnection({
   host: 'localhost',
@@ -22,6 +23,10 @@ con.connect(function (err) {
     connect.query(customer, function (err, result) {
       if (err) throw err;
       console.log('Customer Table created');
+    });
+    connect.query(restaurant, function (err, result) {
+      if (err) throw err;
+      console.log('Restaurant Table created');
     });
   });
 });

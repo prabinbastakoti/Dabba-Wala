@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Lunchbox Menu</title>
+    <link rel="stylesheet" href="/menu.css" />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="topContainer">
+        <a href="/"><h1 class="heading">DABBAWALLA</h1></a>
+        <ul>
+          <li>HOME</li>
+          <li>ABOUT</li>
+          <li>SERVICES</li>
+          <li>CONTACT</li>
+        </ul>
+        <% if (Object.keys(data).length < 1) { %>
+        <div class="">
+          <button class="primaryButton">
+            <a href="/signupform">Signup</a>
+          </button>
+          <button class="primaryButton">
+            <a href="/loginform">Login</a>
+          </button>
+        </div>
+        <%} else { %>
+        <div class="cartSection">
+          <div class="cart">
+            <img src="/cart.png" alt="" />
+            <div class="number">0</div>
+          </div>
+          <button class="primaryButton" id="logout">
+            <a href="/logout">Logout</a>
+          </button>
+        </div>
+        <% } %>
+      </div>
+    </header>
+    <% if (Object.keys(data).length < 1) { %>
+    <div>
+      <p class="loginToSee">Please login to see Subscription LunchBox Menu</p>
+    </div>
+    <%} else { %>
+    <div class="Menucontainer">
+      <!-- Your menu items here -->
+
+      <div class="menu-item">
+        <img src="/1.jpg" alt="Kiwi Classic Lunch Box" />
+        <h2>Kiwi Classic Lunch Box</h2>
+        <p>Main: Kiwi Burger</p>
+        <p>Side: Kumara Fries with Aioli</p>
+        <p>Snack: Lolly Cake</p>
+        <p>Drink: Bottled Water</p>
+        <p class="price">NZ$12.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <!-- Repeat similar div blocks for other lunch box options -->
+
+      <!-- Seafood Feast Lunch Box -->
+      <div class="menu-item">
+        <img src="/2.jpg" alt="Seafood Feast Lunch Box" />
+        <h2>Seafood Feast Lunch Box</h2>
+        <p>Main: Pāua Fritters</p>
+        <p>Side: Garden Salad with Balsamic Dressing</p>
+        <p>Snack: Whitebait Fritters</p>
+        <p>Drink: Sparkling Mineral Water</p>
+        <p class="price">NZ$15.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <!-- Vegetarian Delight Lunch Box -->
+      <div class="menu-item">
+        <img src="3.jpg" />
+        <h2>Vegetarian Delight Lunch Box</h2>
+        <p>Main: Vegetarian Hangi</p>
+        <p>Side: Quinoa Salad with Roasted Vegetables</p>
+        <p>Snack: Vegetable Spring Rolls with Sweet Chili Sauce</p>
+        <p>Drink: Freshly Squeezed Orange Juice</p>
+        <p class="price">NZ$11.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <!-- Sweet Treat Lunch Box -->
+      <div class="menu-item">
+        <img src="4.jpg" />
+        <h2>Sweet Treat Lunch Box</h2>
+        <p>Main: Hokey Pokey Ice Cream</p>
+        <p>Side: Kiwi Pavlova Roll</p>
+        <p>Snack: Chocolate Fish</p>
+        <p>Drink: Iced Green Tea</p>
+        <p class="price">NZ$10.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <!-- Gourmet Lamb Lunch Box -->
+      <div class="menu-item">
+        <img src="5.jpg" />
+        <h2>Gourmet Lamb Lunch Box</h2>
+        <p>Main: Mānuka Honey Glazed Lamb Rack with Mint Sauce</p>
+        <p>Side: Roasted Seasonal Vegetables</p>
+        <p>Snack: Bluff Oysters</p>
+        <p>Drink: Sparkling Apple Cider</p>
+        <p class="price">NZ$17.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <!-- Healthy Green Lunch Box -->
+      <div class="menu-item">
+        <img src="6.jpg" />
+        <h2>Healthy Green Lunch Box</h2>
+        <p>Main: Grilled Chicken Salad</p>
+        <p>Side: Edamame Salad</p>
+        <p>Snack: Fresh Fruit Salad</p>
+        <p>Drink: Coconut Water</p>
+        <p class="price">NZ$13.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <!-- Pacific Rim Lunch Box -->
+      <div class="menu-item">
+        <img src="7.jpg" />
+        <h2>Pacific Rim Lunch Box</h2>
+        <p>Main: Teriyaki Salmon with Steamed Rice</p>
+        <p>Side: Seaweed Salad</p>
+        <p>Snack: Sushi Rolls (assorted)</p>
+        <p>Drink: Green Tea</p>
+        <p class="price">NZ$14.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <!-- Classic Kiwi Pie Lunch Box -->
+      <div class="menu-item">
+        <img src="8.jpg" />
+        <h2>Classic Kiwi Pie Lunch Box</h2>
+        <p>Main: Steak and Cheese Pie</p>
+        <p>Side: Classic Potato Salad</p>
+        <p>Snack: Kiwi Onion Dip with Vegetable Sticks</p>
+        <p>Drink: Lemon Lime Bitters</p>
+        <p class="price">NZ$9.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <!-- Mexican Fiesta Lunch Box -->
+      <div class="menu-item">
+        <img src="9.jpg" />
+        <h2>Mexican Fiesta Lunch Box</h2>
+        <p>Main: Chicken Quesadilla</p>
+        <p>Side: Mexican Street Corn Salad</p>
+        <p>Snack: Tortilla Chips with Salsa and Guacamole</p>
+        <p>Drink: Jarritos Soda (ass)</p>
+        <p class="price">NZ$13.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <!-- Italian Pasta Box -->
+      <div class="menu-item">
+        <img src="10.jpg" />
+        <h2>Italian Pasta Lunch Box</h2>
+        <p>Main: Spaghetti Carbonara</p>
+        <p>Side: Caprese Salad</p>
+        <p>Snack: Garlic Breadsticks</p>
+        <p>Drink: Chianti Wine</p>
+        <p class="price">NZ$16.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn">Buy Now</button>
+      </div>
+    </div>
+    <% } %>
+    <!-- Cart details box -->
+
+    <!-- Add a prominent button to redirect to the cart page
+    <button class="see-cart-btn" onclick="redirectToCart()">
+      See Your Cart 🛒
+    </button> -->
+
+    <script src="menu-page-script.js" defer></script>
+    <!-- <script>
+        function redirectToCart() {
+            window.location.href = "cart-page.html";
+        }
+    </script> -->
+  </body>
+</html>

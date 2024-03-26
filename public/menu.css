@@ -1,0 +1,113 @@
+/* Style the logo image */
+/* Style the logo image */
+.logo img {
+  max-width: 200px; /* Increase the maximum width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Style the container for menu items */
+.Menucontainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 40px;
+  gap: 30px;
+}
+
+/* Style individual menu items */
+.menu-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+
+.menu-item:hover {
+  transform: translateY(-5px); /* Move up on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Style menu item images */
+.menu-item img {
+  display: block;
+  margin: 0 auto 1rem; /* Center image and add space below */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Style menu item headings */
+.menu-item h2 {
+  font-size: 1.2rem; /* Smaller font size */
+  margin-bottom: 0.5rem; /* Reduce bottom margin */
+  text-align: center; /* Center heading */
+}
+
+/* Style menu item details (Main, Side, Snack, Drink) */
+.menu-item p {
+  font-size: 0.9rem; /* Smaller font size */
+  margin-bottom: 0.3rem; /* Reduce bottom margin */
+  text-align: center; /* Center text */
+}
+
+/* Style menu item price */
+.menu-item .price {
+  font-weight: bold;
+  color: #ff7f00; /* Orange color */
+  text-align: center; /* Center text */
+  font-size: 1rem; /* Smaller font size */
+}
+
+/* Style buttons */
+.btn {
+  display: block;
+  width: 100%; /* Full width button */
+  padding: 0.7rem;
+  background-color: #ff7f00; /* Orange color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #ffa500; /* Lighter orange on hover */
+}
+
+/* Style for the cart details box */
+#cart-details-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+/* Style the "See Your Cart" button */
+.see-cart-btn {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #ff7f00; /* Orange color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.see-cart-btn:hover {
+  background-color: #ffa500; /* Lighter orange on hover */
+}
+
+.loginToSee {
+  color: #ffa500;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}

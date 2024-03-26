@@ -1,15 +1,15 @@
 const config = require('../utils/config');
 const mysql = require('mysql');
 
-const getLoginView = async (req, res) => {
-  res.render('loginform');
+const getLoginRestaurantView = async (req, res) => {
+  res.render('LoginRestaurantForm');
 };
 
-const loginEJS = async (req, res) => {
+const loginRestaurantEJS = async (req, res) => {
   const { email, password } = req.body;
 
   const query =
-    'SELECT * FROM Customer WHERE email = ' +
+    'SELECT * FROM Restaurant WHERE email = ' +
     mysql.escape(email) +
     ' AND ' +
     'password = ' +
@@ -26,4 +26,4 @@ const loginEJS = async (req, res) => {
   });
 };
 
-module.exports = { loginEJS, getLoginView };
+module.exports = { loginRestaurantEJS, getLoginRestaurantView };
